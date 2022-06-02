@@ -1,0 +1,10 @@
+.background{
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 100px;
+  background-color: white;
+}
+.background :hover{
+    transform: scale(1.15)
+}

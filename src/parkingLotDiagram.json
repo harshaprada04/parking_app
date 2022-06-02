@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 2,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 3,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 4,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 5,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 6,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 7,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 8,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 9,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 10,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 11,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 12,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 13,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 14,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 15,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 16,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 17,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 18,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 19,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 20,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 21,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 22,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 23,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 24,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 25,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 26,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 27,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 28,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 29,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 30,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 31,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 32,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 33,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 34,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 35,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 36,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 37,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 38,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 39,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  },
+  {
+    "id": 40,
+    "vehicleNo": "",
+    "checkIn": "",
+    "checkOut": "",
+    "parkingSpaceNo": "",
+    "isBooked": false,
+    "isSelected": false
+  }
+]
