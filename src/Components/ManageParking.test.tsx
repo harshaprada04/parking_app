@@ -90,4 +90,5 @@ test("Vehicle details registraion", async () => {
   });
   let click = fireEvent.click(vehicleRegBtn);
   expect(click).toBe(true);
+  expect(context.setVehicleNo).toBeCalledTimes(1);
 });

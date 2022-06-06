@@ -7,6 +7,7 @@ import { DatePicker, TimePicker } from "@mui/lab";
 import Context from "../Context";
 import { useContext } from "react";
 
+
 function VehicleDetails() {
   const navigation = useNavigate();
   const contexts = useContext(Context);
@@ -92,7 +93,6 @@ function VehicleDetails() {
             }}
             renderInput={(params: any) => (
               <TextField
-                // inputProps={{"data-testid":"dates"}}
                 data-testid="dates"
                 {...params}
               />

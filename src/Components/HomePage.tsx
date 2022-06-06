@@ -14,7 +14,7 @@ function HomePage() {
     await contexts.setParkingLotDia(
       parkingLotDiagram.slice(0, parseInt(space))
     );
-    navigation("/manageParking");
+    navigation("/parkingLot");
   }
 
   return (

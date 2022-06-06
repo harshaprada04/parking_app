@@ -20,10 +20,11 @@ function CheckOut() {
     const timeDifference: any = parseFloat(
       ((date1.getTime() - date2.getTime()) / (1000 * 60 * 60)).toFixed(4)
     );
-    if (timeDifference <= 2) {
+    const roundOffTimeDifference:any = Math.ceil(timeDifference)
+    if (roundOffTimeDifference <= 2) {
       setAmount(10.0);
     } else {
-      setAmount(parseFloat((10 + (timeDifference - 2) * 10).toFixed(4)));
+      setAmount(parseInt((10 + (roundOffTimeDifference - 2) * 10).toFixed(0)));
     }
   }
 
@@ -111,7 +112,7 @@ function CheckOut() {
               <TableRow>
                 <TableCell>Amount</TableCell>
                 <TableCell>:</TableCell>
-                <TableCell>Rs. {amount}</TableCell>
+                <TableCell>$ {amount}</TableCell>
               </TableRow>
             </TableBody>
           </Table>
@@ -126,7 +127,7 @@ function CheckOut() {
               navigateToPaymentGateWay();
             }}
           >
-            Pay Rs {amount}
+            Pay $ {amount}
           </Button>
         </div>
       )}
