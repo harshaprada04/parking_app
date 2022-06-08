@@ -58,7 +58,7 @@ test("Back button has click event", () => {
 
 test("Payment button has click event", () => {
   render(<AddRouting />);
-  let paymentBtn = screen.getByTestId(/payment_btn/i);
+  let paymentBtn = screen.getByTestId(/deregister-payment-button/i);
   let click = fireEvent.click(paymentBtn);
   expect(click).toBe(true);
 });
@@ -84,7 +84,7 @@ test("Payment button has click event", () => {
       </Context.Provider>
     </BrowserRouter>
   );
-  let paymentBtn = screen.getByTestId(/payment_btn/i);
+  let paymentBtn = screen.getByTestId(/deregister-payment-button/i);
   let click = fireEvent.click(paymentBtn);
   expect(click).toBe(true);
 });

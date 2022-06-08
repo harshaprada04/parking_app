@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import { useContext, useState } from "react";
 import Context from "../Context";
-import parkingLotDiagram from "../parkingLotDiagram.json";
 
 function HomePage() {
   const navigation = useNavigate();
@@ -11,9 +10,20 @@ function HomePage() {
   const contexts: any = useContext(Context);
 
   async function clickHandler() {
-    await contexts.setParkingLotDia(
-      parkingLotDiagram.slice(0, parseInt(space))
-    );
+    let array=[]
+       for (let i=0;i<parseInt(space);i++){
+        let object = {
+          "id": i+1,
+        "vehicleNo": "",
+        "checkIn": "",
+        "checkOut": "",
+        "parkingSpaceNo": "",
+        "isBooked": false,
+        "isSelected": false
+        }
+       await array.push(object)
+    } 
+    await contexts.setParkingLotDia(array)
     navigation("/parkingLot");
   }
 
@@ -42,6 +52,7 @@ function HomePage() {
         }}
       >
         <TextField
+          data-testid= "parking-create-text-input"
           id="outlined-basic"
           variant="outlined"
           label="Parking Space"
@@ -52,6 +63,7 @@ function HomePage() {
           }}
         />
         <Button
+          data-testid = "parking-create-submit-button"
           variant="contained"
           color="primary"
           style={{ textTransform: "none" }}

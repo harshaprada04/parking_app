@@ -6,12 +6,7 @@ import Context from "../Context";
 
 let AddRouting = () => {
   const context: any = {
-    parkingLotDia: [],
-    setParkingLotDia: (a: any) => {},
-    vehicleNo: "",
-    setVehicleNo: (a: any) => {},
-    date: "",
-    setDate: (a: any) => {},
+    parkingLotDia: []
   };
   return (
     <BrowserRouter>

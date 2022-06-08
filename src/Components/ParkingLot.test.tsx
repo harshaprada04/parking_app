@@ -6,28 +6,23 @@ import ParkingLot from "./ParkingLot";
 
 let AddRouting: any = () => {
   const context: any = {
-    setVehicleNo: jest.fn(),
     setParkingLotDia: jest.fn(),
-    vehicleNo: "112",
-    date: new Date(),
     parkingLotDia: [
       {
         id: "1",
-        vehicleNo: "",
-        checkIn: "",
+        vehicleNo: "1111",
+        checkIn: new Date(),
         checkOut: "",
-        parkingSpaceNo: "",
-        isBooked: false,
-        isSelected: false,
+        parkingSpaceNo: "1",
+        isBooked: true
       },
       {
         id: "2",
         vehicleNo: "111",
         checkIn: new Date(),
         checkOut: "",
-        parkingSpaceNo: "",
+        parkingSpaceNo: "2",
         isBooked: true,
-        isSelected: false,
       },
     ],
   };
@@ -52,78 +47,57 @@ test("Back button has click event", () => {
   expect(click).toBe(true);
 });
 
-test("CheckIn", async () => {
+test("Chech Out", () => {
   render(<AddRouting />);
-  let bookingDiv = screen.getByTestId("booking-0");
-  expect(bookingDiv).toBeInTheDocument();
-  await new Promise((r) => setTimeout(r, 4000));
-  let parkingSpace = screen.getByTestId("parking_space-0");
-  expect(parkingSpace).toBeInTheDocument();
-  let click = await fireEvent.click(parkingSpace);
+  let checkOutBtn = screen.getByTestId("checkOutBtn-1");
+  let click = fireEvent.click(checkOutBtn);
   expect(click).toBe(true);
-  await new Promise((r) => setTimeout(r, 4000));
-  let yesBtn = await screen.getByTestId(/confirm/i);
-  let clickOnYesBtn = fireEvent.click(yesBtn);
-  expect(clickOnYesBtn).toBe(true);
 });
 
-test("Cancel", async () => {
+test("Parking Lot is full", async () => {
   render(<AddRouting />);
-  let bookingDiv = screen.getByTestId("booking-0");
-  expect(bookingDiv).toBeInTheDocument();
-  let parkingSpace = screen.getByTestId("parking_space-0");
-  expect(parkingSpace).toBeInTheDocument();
-  let click = await fireEvent.click(parkingSpace);
-  expect(click).toBe(true);
+  let vehicleRegBtn = screen.getByRole("button", { name: /Vehicle Registration/i });
+  fireEvent.click(vehicleRegBtn);
   await new Promise((r) => setTimeout(r, 4000));
-  let noBtn = await screen.getByTestId(/no/i);
-  let clickOnNoBtn = fireEvent.click(noBtn);
-  expect(clickOnNoBtn).toBe(true);
+  const parkingFullBtn = screen.getByTestId("parking_full_btn")
+  expect(fireEvent.click(parkingFullBtn)).toBe(true);
 });
 
-test("Check Out", async () => {
-  render(<AddRouting />);
-  let bookingDiv = screen.getByTestId("booking-1");
-  expect(bookingDiv).toBeInTheDocument();
-  let parkingSpace = screen.getByTestId("parking_space-1");
-  expect(parkingSpace).toBeInTheDocument();
-  let checkOutBtn = screen.getByTestId(/check_out/i);
-  let clickOnCheckOutBtn = fireEvent.click(checkOutBtn);
-  expect(clickOnCheckOutBtn).toBe(true);
-});
 
-test("Vehicle details is empty", async () => {
+test("Vehicle Registration", async() => {
   const context: any = {
-    vehicleNo: "",
-    setVehicleNo: jest.fn(),
-    setParkingLotDia: jest.fn(),
-    parkingLotDia: [
-      {
-        id: "1",
-        vehicleNo: "",
-        checkIn: "",
-        checkOut: "",
-        parkingSpaceNo: "",
-        isBooked: false,
-        isSelected: false,
-      },
-    ],
-  };
-  render(
-    <BrowserRouter>
-      <Context.Provider value={context}>
-        <ParkingLot />
-      </Context.Provider>
-    </BrowserRouter>
-  );
-  let bookingDiv = screen.getByTestId("booking-0");
-  expect(bookingDiv).toBeInTheDocument();
-  let parkingSpace = screen.getByTestId("parking_space-0");
-  expect(parkingSpace).toBeInTheDocument();
-  let click = await fireEvent.click(parkingSpace);
-  expect(click).toBe(true);
+        setParkingLotDia: jest.fn(),
+        parkingLotDia: [
+          {
+            id: 1,
+            vehicleNo: "",
+            checkIn: "",
+            checkOut: "",
+            parkingSpaceNo: "",
+            isBooked: false,
+          },
+        ],
+      };
+      render(
+        <BrowserRouter>
+          <Context.Provider value={context}>
+            <ParkingLot />
+          </Context.Provider>
+        </BrowserRouter>
+      );
+  let vehicleRegBtn = screen.getByRole("button", { name: /Vehicle Registration/i });
+  fireEvent.click(vehicleRegBtn);
   await new Promise((r) => setTimeout(r, 4000));
-  let navigateToVDPage = await screen.getByTestId(/naviagte_vehicleDetails/i);
-  let clickOnVD = fireEvent.click(navigateToVDPage);
-  expect(clickOnVD).toBe(true);
+  const xBtn = screen.getByTestId("cancel_btn");
+  const clickOnXBtn = fireEvent.click(xBtn);
+  expect(clickOnXBtn).toBe(true);
+  fireEvent.click(vehicleRegBtn);
+  await new Promise((r) => setTimeout(r, 4000));
+  const vehicleNoBtn = screen.getByTestId("parking-drawing-add-car-button")
+  const inputVehicleNo = screen.getByLabelText("Vehicle Number");
+  fireEvent.change(inputVehicleNo, {target:{value:"KA-21 MB-4044"}});
+  expect(vehicleNoBtn).not.toBeDisabled();
+  let clickOnSubmitBtn = fireEvent.click(vehicleNoBtn);
+  expect(clickOnSubmitBtn).toBe(true);
 });
+

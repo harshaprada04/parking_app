@@ -29,8 +29,8 @@ function PaymentGateWay() {
     );
   }
 
-  const navigateManageParking: any = () => {
-    navigation("/manageParking");
+  const navigateParkingLot: any = () => {
+    navigation("/parkingLot");
   };
 
   return (
@@ -65,7 +65,7 @@ function PaymentGateWay() {
           color="primary"
           onClick={async () => {
             await BookHandler(id);
-            navigateManageParking();
+            navigateParkingLot();
           }}
         >
           Home

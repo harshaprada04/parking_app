@@ -20,7 +20,7 @@ function CheckOut() {
     const timeDifference: any = parseFloat(
       ((date1.getTime() - date2.getTime()) / (1000 * 60 * 60)).toFixed(4)
     );
-    const roundOffTimeDifference:any = Math.ceil(timeDifference)
+    const roundOffTimeDifference: any = Math.ceil(timeDifference);
     if (roundOffTimeDifference <= 2) {
       setAmount(10.0);
     } else {
@@ -52,6 +52,7 @@ function CheckOut() {
     >
       {Object.keys(currentVehicle).length > 0 && (
         <div
+        data-testid = "deregister-car-registration"
           style={{
             height: "85%",
             width: "70%",
@@ -65,6 +66,7 @@ function CheckOut() {
           }}
         >
           <Button
+             data-testid = 'deregister-back-button'
             variant="contained"
             color="primary"
             onClick={() => navigation("/parkingLOt")}
@@ -72,18 +74,18 @@ function CheckOut() {
               textTransform: "none",
               position: "relative",
               left: "-44%",
-              top:"1%"
+              top: "1%",
             }}
           >
             Back
           </Button>
           <Table
             style={{
-              position:"relative",
+              position: "relative",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              top:"-4%"
+              top: "-4%",
             }}
           >
             <TableBody>
@@ -97,7 +99,7 @@ function CheckOut() {
               <TableRow>
                 <TableCell>Parking Space Number</TableCell>
                 <TableCell>:</TableCell>
-                <TableCell>{currentVehicle.parkingSpaceNo}</TableCell>
+                <TableCell data-testid={`parking-drawing-registered-${currentVehicle.parkingSpaceNo}`}>{currentVehicle.parkingSpaceNo}</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell>Check In</TableCell>
@@ -107,21 +109,20 @@ function CheckOut() {
               <TableRow>
                 <TableCell>Check Out</TableCell>
                 <TableCell>:</TableCell>
-                <TableCell>{currentVehicle.checkOut.toString()}</TableCell>
+                <TableCell data-testid= "deregister-time-spent">{currentVehicle.checkOut.toString()}</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell>Amount</TableCell>
                 <TableCell>:</TableCell>
-                <TableCell>$ {amount}</TableCell>
+                <TableCell data-testid= "deregister-charge">$ {amount}</TableCell>
               </TableRow>
             </TableBody>
           </Table>
           <Button
-            data-testid="Payment_btn"
+            data-testid="deregister-payment-button"
             variant="contained"
             color="primary"
-            style={{ textTransform: "none",
-          bottom:"3%" }}
+            style={{ textTransform: "none", bottom: "3%" }}
             onClick={async () => {
               await postVehicleDetails(currentVehicle);
               navigateToPaymentGateWay();

@@ -2,8 +2,7 @@ import "@testing-library/jest-dom";
 import HomePage from "./HomePage";
 import { BrowserRouter } from "react-router-dom";
 import { fireEvent, render, screen } from "@testing-library/react";
-import Context from "../Context";
-import { ContextProvider } from "../Context";
+
 
 const AddRouting = () => {
   return (
